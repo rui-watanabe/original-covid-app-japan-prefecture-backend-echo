@@ -1,0 +1,310 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Original Covid APP Prefecture Backend Echo
+servers:
+  - url: http://loclahost:8080/api/
+paths:
+  /prefectures:
+    get:
+      summary: Returns all prefectures
+      responses:
+        '200':
+          description: prefectures response
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/Prefectures'
+components:
+  schemas:
+    Prefectures:
+      required:
+        - date
+        - currentPrefecture
+        - isLoading
+        - data
+      properties:
+        date:
+          type: string
+          description: get date
+        currentPrefecture:
+          type: string
+          description: current prefecture
+        isLoading:
+          type: boolean
+          description: judge loading(set init false)
+        data:
+          type: object
+          description: prefecture data
+          $ref: '#/components/schemas/PrefectureData'
+        error: 
+          type: object
+          description: prefecture error data
+          $ref: '#/components/schemas/ErrorData'
+    PrefectureData:
+      required:
+        - hokkaido
+        - aomori
+        - iwate
+        - miyagi
+        - akita
+        - yamagata
+        - fukushima
+        - ibaraki
+        - tochigi
+        - gunma
+        - saitama
+        - chiba
+        - tokyo
+        - kanagawa
+        - niigata
+        - toyama
+        - ishikawa
+        - fukui
+        - yamanashi
+        - nagano
+        - gifu
+        - shizuoka
+        - aichi
+        - mie
+        - shiga
+        - kyoto
+        - osaka
+        - hyogo
+        - nara
+        - wakayama
+        - tottori
+        - shimane
+        - okayama
+        - hiroshima
+        - yamaguchi
+        - tokushima
+        - kagawa
+        - ehime
+        - kochi
+        - fukuoka
+        - saga
+        - nagasaki
+        - kumamoto
+        - oita
+        - miyazaki
+        - kagoshima
+        - okinawa
+      properties:
+        hokkaido:
+          type: object
+          description: hokkaido date
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        aomori: 
+          type: object
+          description: aomori data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        iwate: 
+          type: object
+          description: iwate data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        miyagi: 
+          type: object
+          description: miyagi data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        akita: 
+          type: object
+          description: akita data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        yamagata: 
+          type: object
+          description: yamagata data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        fukushima: 
+          type: object
+          description: fukushima data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        ibaraki: 
+          type: object
+          description: ibaraki data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        tochigi: 
+          type: object
+          description: tochigi data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        gunma: 
+          type: object
+          description: gnma data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        saitama: 
+          type: object
+          description: saitama data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        chiba: 
+          type: object
+          description: chiba data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        tokyo: 
+          type: object
+          description: tokyo data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        kanagawa: 
+          type: object
+          description: kanagawa data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        niigata: 
+          type: object
+          description: niigata data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        toyama: 
+          type: object
+          description: toyama data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        ishikawa: 
+          type: object
+          description: ishikawa data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        fukui: 
+          type: object
+          description: fuki data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        yamanashi: 
+          type: object
+          description: yamanashi data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        nagano: 
+          type: object
+          description: nagano data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        gifu: 
+          type: object
+          description: gifu data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        shizuoka: 
+          type: object
+          description: shizuoka data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        aichi: 
+          type: object
+          description: aichi data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        mie: 
+          type: object
+          description: mie data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        shiga: 
+          type: object
+          description: shiga data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        kyoto: 
+          type: object
+          description: kyoto data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        osaka: 
+          type: object
+          description: osaka data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        hyogo: 
+          type: object
+          description: hyogo data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        nara: 
+          type: object
+          description: nara data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        wakayama: 
+          type: object
+          description: wakayama data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        tottori: 
+          type: object
+          description: tottori data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        shimane: 
+          type: object
+          description: shimane data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        okayama: 
+          type: object
+          description: okayama data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        hiroshima: 
+          type: object
+          description: hiroshima data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        yamaguchi: 
+          type: object
+          description: yamaguchi data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        tokushima: 
+          type: object
+          description: tokushima data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        kagawa: 
+          type: object
+          description: kagawa data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        ehime: 
+          type: object
+          description: ehime data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        kochi: 
+          type: object
+          description: kochi data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        fukuoka: 
+          type: object
+          description: fukuoka data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        saga: 
+          type: object
+          description: saga data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        nagasaki: 
+          type: object
+          description: nagasaki data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        kumamoto: 
+          type: object
+          description: kumamoto data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        oita: 
+          type: object
+          description: oita data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        miyazaki: 
+          type: object
+          description: miyazaki data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        kagoshima: 
+          type: object
+          description: kagoshiima data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+        okinawa: 
+          type: object
+          description: okinawa data
+          $ref: '#/components/schemas/PrefectureHospitalData'
+    PrefectureHospitalData:
+      required:
+        - hospitalize
+        - outPatient
+        - emergency
+      properties:
+        hospitalize:
+          type: integer
+          description: hospitalize peoples number
+        outPatient:
+          type: integer
+          description: outPatient peoples number
+        emergency: 
+          type: integer
+          description: emergency peoples number
+    ErrorData:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+          description: Error code
+        message:
+          type: string
+          description: Error message
