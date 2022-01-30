@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-func RunClient() (p Prefectures) {
+func GetClient() (p Prefectures) {
 	c, err := NewClient("https://opendata.corona.go.jp/api/covid19DailySurvey")
 	if err != nil {
 		log.Fatalln(err)
@@ -26,9 +26,9 @@ func RunClient() (p Prefectures) {
 		log.Fatalln(err)
 	}
 
-	err = json.Unmarshal(body, p)
+	err = json.Unmarshal(body, &p)
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return
+	return p
 }
