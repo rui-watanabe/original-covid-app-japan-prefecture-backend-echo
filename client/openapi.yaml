@@ -1,0 +1,67 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Original Covid APP Prefecture Backend Client
+servers:
+  - url: https://opendata.corona.go.jp/api/covid19DailySurvey
+paths:
+  /:
+    get:
+      summary: Returns all prefectures
+      responses:
+        '200':
+          description: prefectures response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Prefectures'
+components:
+  schemas:
+    Prefectures:
+      type: array
+      items:
+        type: object
+        required:
+          - facilityId
+          - facilityName
+          - zipCode
+          - prefName
+          - facilityAddr
+          - facilityTel
+          - latitude
+          - longitude
+          - submitDate
+          - facilityType
+          - ansType
+          - localGovCode
+          - cityName
+          - facilityCode
+        properties:
+          facilityId:
+            type: string
+          facilityName:
+            type: string
+          zipCode:
+            type: string
+          prefName:
+            type: string
+          facilityAddr:
+            type: string
+          facilityTel:
+            type: string
+          latitude:
+            type: string
+          longitude:
+            type: string
+          submitDate:
+            type: string
+          facilityType:
+            type: string
+          ansType:
+            type: string
+          localGovCode:
+            type: string
+          cityName:
+            type: string
+          facilityCode:
+            type: string
