@@ -22,19 +22,11 @@ components:
     Prefectures:
       required:
         - date
-        - currentPrefecture
-        - isLoading
         - data
       properties:
         date:
           type: string
           description: get date
-        currentPrefecture:
-          type: string
-          description: current prefecture
-        isLoading:
-          type: boolean
-          description: judge loading(set init false)
         data:
           type: object
           description: prefecture data
