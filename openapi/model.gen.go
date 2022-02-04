@@ -79,16 +79,10 @@ type PrefectureHospitalData struct {
 
 // Prefectures defines model for Prefectures.
 type Prefectures struct {
-
-	// current prefecture
-	CurrentPrefecture string         `json:"currentPrefecture"`
-	Data              PrefectureData `json:"data"`
+	Data PrefectureData `json:"data"`
 
 	// get date
 	Date  string     `json:"date"`
 	Error *ErrorData `json:"error,omitempty"`
-
-	// judge loading(set init false)
-	IsLoading bool `json:"isLoading"`
 }
 
