@@ -166,7 +166,7 @@ type ClientWithResponsesInterface interface {
 type GetResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
-	JSON200      *map[string]interface{}
+	JSON200      *Prefectures
 }
 
 // Status returns HTTPResponse.Status
@@ -209,7 +209,7 @@ func ParseGetResponse(rsp *http.Response) (*GetResponse, error) {
 
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
-		var dest map[string]interface{}
+		var dest Prefectures
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
