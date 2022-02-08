@@ -7,8 +7,24 @@ import (
 	"log"
 )
 
-func GetClient() (p Prefectures) {
-	c, err := NewClient("https://opendata.corona.go.jp/api/covid19DailySurvey")
+type ApiClient interface {
+	Request() (Prefectures, error)
+}
+
+type DataGet struct {
+	client ApiClient // インターフェイスに依存しているだけで実装は存在しない
+}
+
+func (d *DataGet) Get(req ApiClient) (Prefectures, error) {
+	result, err := req.Request()
+	if err != nil {
+		return make(Prefectures, 0), err
+	}
+	return result, nil
+}
+
+func (d *DataGet) Request() (p Prefectures, err error) {
+	c, err := NewClient("http://localhost:3000/api/client/data")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -30,5 +46,5 @@ func GetClient() (p Prefectures) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return p
+	return
 }
