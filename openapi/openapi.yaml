@@ -14,12 +14,12 @@ paths:
           content:
             application/json:
               schema:
-                type: object
                 items:
                   $ref: '#/components/schemas/Prefectures'
 components:
   schemas:
     Prefectures:
+      type: object
       required:
         - date
         - data
@@ -88,206 +88,224 @@ components:
         hokkaido:
           type: object
           description: hokkaido date
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         aomori: 
           type: object
           description: aomori data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         iwate: 
           type: object
           description: iwate data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         miyagi: 
           type: object
           description: miyagi data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         akita: 
           type: object
           description: akita data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         yamagata: 
           type: object
           description: yamagata data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         fukushima: 
           type: object
           description: fukushima data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         ibaraki: 
           type: object
           description: ibaraki data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         tochigi: 
           type: object
           description: tochigi data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         gunma: 
           type: object
           description: gnma data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         saitama: 
           type: object
           description: saitama data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         chiba: 
           type: object
           description: chiba data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         tokyo: 
           type: object
           description: tokyo data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         kanagawa: 
           type: object
           description: kanagawa data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         niigata: 
           type: object
           description: niigata data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         toyama: 
           type: object
           description: toyama data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         ishikawa: 
           type: object
           description: ishikawa data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         fukui: 
           type: object
           description: fuki data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         yamanashi: 
           type: object
           description: yamanashi data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         nagano: 
           type: object
           description: nagano data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         gifu: 
           type: object
           description: gifu data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         shizuoka: 
           type: object
           description: shizuoka data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         aichi: 
           type: object
           description: aichi data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         mie: 
           type: object
           description: mie data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         shiga: 
           type: object
           description: shiga data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         kyoto: 
           type: object
           description: kyoto data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         osaka: 
           type: object
           description: osaka data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         hyogo: 
           type: object
           description: hyogo data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         nara: 
           type: object
           description: nara data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         wakayama: 
           type: object
           description: wakayama data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         tottori: 
           type: object
           description: tottori data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         shimane: 
           type: object
           description: shimane data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         okayama: 
           type: object
           description: okayama data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         hiroshima: 
           type: object
           description: hiroshima data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         yamaguchi: 
           type: object
           description: yamaguchi data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         tokushima: 
           type: object
           description: tokushima data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         kagawa: 
           type: object
           description: kagawa data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         ehime: 
           type: object
           description: ehime data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         kochi: 
           type: object
           description: kochi data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         fukuoka: 
           type: object
           description: fukuoka data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         saga: 
           type: object
           description: saga data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         nagasaki: 
           type: object
           description: nagasaki data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         kumamoto: 
           type: object
           description: kumamoto data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         oita: 
           type: object
           description: oita data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         miyazaki: 
           type: object
           description: miyazaki data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         kagoshima: 
           type: object
           description: kagoshiima data
-          $ref: '#/components/schemas/PrefectureHospitalData'
+          $ref: '#/components/schemas/PrefectureFacilityType'
         okinawa: 
           type: object
           description: okinawa data
-          $ref: '#/components/schemas/PrefectureHospitalData'
-    PrefectureHospitalData:
+          $ref: '#/components/schemas/PrefectureFacilityType'
+    PrefectureFacilityType:
       required:
         - hospitalize
         - outPatient
         - emergency
       properties:
         hospitalize:
-          type: integer
           description: hospitalize peoples number
+          $ref: '#/components/schemas/PrefectureAnsType'
         outPatient:
-          type: integer
           description: outPatient peoples number
+          $ref: '#/components/schemas/PrefectureAnsType'
         emergency: 
-          type: integer
           description: emergency peoples number
+          $ref: '#/components/schemas/PrefectureAnsType'
+    PrefectureAnsType:
+        properties:
+          normal:
+            type: integer
+          limit:
+            type: integer
+          stopped:
+            type: integer
+          unintroduced:
+            type: integer
+          unanswered:
+            type: integer
+        required:
+          - normal
+          - limit
+          - stopped
+          - unintroduced
+          - unanswered
     ErrorData:
       required:
         - code
